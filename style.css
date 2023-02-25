@@ -1,3 +1,4 @@
+
 body{
     font-family: sans-serif;
     margin: 0;
@@ -36,6 +37,7 @@ h2{
     position:relative;
 }
 .clock span{
+    
     width: 100px;
     height: 80px;
     background: slategray;
@@ -48,7 +50,7 @@ h2{
     font-size: 50px;
     /*Horizontal shadow postion, vetical, blur radius, color*/
     /*rba, opacity at end*/
-    text-shadow: 2px 2px 4px rgba(0,0,0,.3)
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
 }
 .clock .text{
 height: 30px;
@@ -58,13 +60,50 @@ letter-spacing: 2px;
 background-color: burlywood;
 opacity:.8;
 }
-.fact{
+.day span{
+    
     position: relative;
-    height: 40px;
+    margin: 4px;
+    
+    color: white;
+    width: 320px;
+    height: 80px;
+    line-height: 80px;
+    background: slategray;
+    opacity: 0.8;
+    color: white;
+   
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    text-align: center;
+    /*Horizontal shadow postion, vetical, blur radius, color*/
+    /*rba, opacity at end*/
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3)
+
+}
+#numyears{
+    text-align: center;
+    font-size: 50px;
+    opacity: 0.8;
+    margin-right: 5px;
+    
+    width:100px;
+    float: left;
+    height:80px;
+    
+}
+
+.fact{
     color: white;
     
-    
-    display:absolute;
+    width: 430px;
+    height: 80px;
+    background: slategray;
+    opacity:.8;
+    text-align: center;
+    display:flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
@@ -72,4 +111,23 @@ opacity:.8;
     /*rba, opacity at end*/
     text-shadow: 2px 2px 4px rgba(0,0,0,.3)
 }
+.special{
+text-align: center;
+
+top: 4px;
+display: flex;
+width: 430px;
+color: white;
+height: 30px;
+font-size: 10px;
+text-transform: uppercase;
+letter-spacing: 2px;
+background-color: burlywood;
+opacity:.8;
+justify-content: center;
+align-items: center;
+text-shadow: 2px 2px 4px rgba(0,0,0,.3)
+}
+
+
 

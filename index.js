@@ -12,6 +12,7 @@ const  updateClock = () =>
     let m = new Date().getMinutes();
     let s = new Date().getSeconds();
     let ampm = "AM";
+    if (h == 0){h = 12;}
     if (h > 12){
         h = h-12;
         ampm = "PM"
@@ -49,31 +50,66 @@ const response = await fetch( url,
 const res = await response.json();
 console.log(res)
 let choice = Math.floor(Math.random() *4)
+
+
+
 if (choice == 0){
 let number = Math.floor(Math.random() * (res.births.length+1));
+
 factEl.innerText = (res.births[number].text);
-yearsEl.innerText = today.getFullYear() - res.births[number].year;
+
+let lengthof = factEl.innerText.length
+
+let num = String((lengthof / 22) * 20)
+factEl.style.height = num + 'px'
+
+
+
+years = today.getFullYear() - res.births[number].year;
+yearsEl.innerText= years;
+specialEl.style.display = "flex";
 specialEl.innerText = 'was born';
 }
 
 else if (choice == 1){
  let number = Math.floor(Math.random() * (res.deaths.length+1));
  factEl.innerText = (res.deaths[number].text);
- yearsEl.innerText = today.getFullYear() - res.deaths[number].year;
+ let lengthof = factEl.innerText.length
+
+ let num = String((lengthof / 22) * 20)
+ factEl.style.height = num + 'px'
+
+ years = today.getFullYear() - res.deaths[number].year;
+yearsEl.innerText= years;
+
  specialEl.innerText = 'died';
 }
 
 else if (choice == 2){
 let number = Math.floor(Math.random() * (res.selected.length+1));
 factEl.innerText = (res.selected[number].text);
-yearsEl.innerText = today.getFullYear() - res.selected[number].year;
+let lengthof = factEl.innerText.length
+
+let num = String((lengthof / 22) * 20)
+factEl.style.height = num + 'px'
+
+years = today.getFullYear() - res.selected[number].year;
+yearsEl.innerText= years;
+
 specialEl.innerText = '';
 }
 
 else if (choice == 3){
     let number = Math.floor(Math.random() * (res.events.length+1));
     factEl.innerText = (res.events[number].text);
-    yearsEl.innerText = today.getFullYear() - res.events[number].year;
+    let lengthof = factEl.innerText.length
+
+   let num = String((lengthof / 22) * 20)
+    factEl.style.height = num + 'px'
+
+    years = today.getFullYear() - res.events[number].year;
+    yearsEl.innerText = years;
+    
     specialEl.innerText = '';
     }
 
